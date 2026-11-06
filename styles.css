@@ -117,6 +117,11 @@ a { color: inherit; }
 .project-video,
 .project-image { object-fit: cover; }
 
+.schools-card .project-video {
+  height: 112%;
+  transform: translateY(-8%);
+}
+
 .project-copy { padding: 14px 4px 0; }
 
 .project-type { margin: 0 0 6px; }
