@@ -255,29 +255,28 @@ a { color: inherit; }
 
 .case-body {
   display: grid;
-  grid-template-columns: minmax(220px, .7fr) minmax(0, 1.3fr);
-  gap: clamp(40px, 8vw, 120px);
-  max-width: 1080px;
-  margin: 72px auto;
+  grid-template-columns: 1fr;
+  gap: 14px;
+  max-width: 720px;
+  margin: 64px auto;
 }
 
 .case-body h2 {
   margin: 0;
   font-family: var(--serif);
-  font-size: clamp(1.8rem, 3vw, 2.5rem);
+  font-size: clamp(1.5rem, 2.2vw, 1.9rem);
   font-weight: 400;
   line-height: 1.08;
 }
 
-.case-body-copy { max-width: 55ch; }
+.case-body-copy { max-width: 58ch; }
 .case-body-copy p { margin: 0 0 18px; color: #5e5954; }
 
 .case-tools span {
   margin-right: 10px;
-  color: var(--muted);
-  font-size: .66rem;
-  letter-spacing: .1em;
-  text-transform: uppercase;
+  color: var(--ink);
+  font-size: inherit;
+  font-weight: 500;
 }
 
 .external-link {
