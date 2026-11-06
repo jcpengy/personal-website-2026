@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Selected interactive data visualization projects by Jess Peng."
+    />
+    <meta name="theme-color" content="#fbfaf7" />
+    <title>Jess Peng — Selected Work</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header shell">
+      <a class="wordmark" href="/" aria-label="Jess Peng, home">Jess Peng</a>
+      <span class="section-label" aria-current="page">Projects</span>
+    </header>
+
+    <main class="shell">
+      <div class="page-intro">
+        <p class="eyebrow">Selected work</p>
+      </div>
+
+      <section class="project-grid" aria-label="Selected projects">
+        <a
+          class="project-card dating-card"
+          href="https://sf-dating-pool.vercel.app/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Open Dating in San Francisco interactive project"
+        >
+          <div class="project-visual" aria-hidden="true">
+            <svg viewBox="0 0 640 420" role="img">
+              <defs>
+                <linearGradient id="dating-bg" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0" stop-color="#fffaf7" />
+                  <stop offset="1" stop-color="#f7e8e3" />
+                </linearGradient>
+                <g id="person">
+                  <circle cx="7" cy="6" r="4.3" />
+                  <path d="M1.5 22.5v-7.4c0-3.2 2.4-5.5 5.5-5.5s5.5 2.3 5.5 5.5v7.4H9.8v-6.6H4.2v6.6z" />
+                </g>
+              </defs>
+              <rect width="640" height="420" rx="22" fill="url(#dating-bg)" />
+              <path class="heart heart-one" d="M80 70c-18-18-48 5-20 31l20 18 20-18c28-26-2-49-20-31Z" />
+              <path class="heart heart-two" d="M546 287c-11-12-31 3-13 19l13 12 13-12c18-16-2-31-13-19Z" />
+              <g class="people" fill="#cf4d4f">
+                <g transform="translate(58 165)">
+                  <use href="#person" x="0" /><use href="#person" x="24" /><use href="#person" x="48" /><use href="#person" x="72" />
+                  <use href="#person" x="96" /><use href="#person" x="120" /><use href="#person" x="144" /><use href="#person" x="168" />
+                  <use href="#person" x="192" /><use href="#person" x="216" /><use href="#person" x="240" />
+                </g>
+                <g transform="translate(58 199)" opacity=".82">
+                  <use href="#person" x="0" /><use href="#person" x="24" /><use href="#person" x="48" /><use href="#person" x="72" />
+                  <use href="#person" x="96" /><use href="#person" x="120" /><use href="#person" x="144" /><use href="#person" x="168" />
+                  <use href="#person" x="192" /><use href="#person" x="216" />
+                </g>
+                <g transform="translate(58 233)" opacity=".62">
+                  <use href="#person" x="0" /><use href="#person" x="24" /><use href="#person" x="48" /><use href="#person" x="72" />
+                  <use href="#person" x="96" /><use href="#person" x="120" /><use href="#person" x="144" /><use href="#person" x="168" />
+                </g>
+              </g>
+              <g class="dating-panel">
+                <rect x="375" y="54" width="207" height="284" rx="18" fill="#fff" stroke="#eadbd6" />
+                <text x="400" y="92" fill="#292725" font-family="DM Sans, sans-serif" font-size="12" letter-spacing="1.4">YOUR DATING POOL</text>
+                <text x="400" y="147" fill="#cf4d4f" font-family="Newsreader, serif" font-size="45">9,000</text>
+                <text x="400" y="171" fill="#6f6964" font-family="DM Sans, sans-serif" font-size="13">estimated SF adults</text>
+                <rect x="400" y="208" width="156" height="38" rx="19" fill="#cf4d4f" />
+                <text x="478" y="232" text-anchor="middle" fill="#fff" font-family="DM Sans, sans-serif" font-size="13">Keep narrowing</text>
+                <path d="M400 280h156" stroke="#e9e1dd" />
+                <circle cx="415" cy="303" r="5" fill="#cf4d4f" />
+                <path d="M430 303h91" stroke="#d8cfca" stroke-linecap="round" />
+              </g>
+            </svg>
+          </div>
+
+          <div class="project-copy">
+            <p class="project-type">Data visualization · Interactive</p>
+            <h2>Dating in San Francisco</h2>
+            <p class="project-description">
+              An interactive estimate of how preferences shape the city’s dating pool.
+            </p>
+            <span class="project-link">View live <span aria-hidden="true">↗</span></span>
+          </div>
+        </a>
+
+        <a
+          class="project-card schools-card"
+          href="https://sfusd-school-diversity.vercel.app/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Open SFUSD School Diversity interactive project"
+        >
+          <div class="project-visual" aria-hidden="true">
+            <svg viewBox="0 0 640 420" role="img">
+              <defs>
+                <linearGradient id="schools-bg" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0" stop-color="#f7f8f4" />
+                  <stop offset="1" stop-color="#e7eee7" />
+                </linearGradient>
+              </defs>
+              <rect width="640" height="420" rx="22" fill="url(#schools-bg)" />
+              <path
+                class="sf-shape"
+                d="M82 66 230 42l55 42 36-12 44 27 89 2 53 58-16 42 39 43-42 76-67 22-54 37-75-19-39-46-76-18-55-65 16-60-28-48Z"
+                fill="#fff" stroke="#d2dcd3" stroke-width="2"
+              />
+              <g class="school-dots">
+                <circle cx="153" cy="124" r="13" fill="#4f7f73" /><circle cx="219" cy="94" r="9" fill="#e0a54b" />
+                <circle cx="280" cy="125" r="15" fill="#bd6c59" /><circle cx="358" cy="119" r="11" fill="#5b88a1" />
+                <circle cx="429" cy="142" r="17" fill="#826c98" /><circle cx="190" cy="185" r="16" fill="#5b88a1" />
+                <circle cx="256" cy="203" r="10" fill="#826c98" /><circle cx="335" cy="182" r="18" fill="#4f7f73" />
+                <circle cx="410" cy="212" r="12" fill="#e0a54b" /><circle cx="145" cy="252" r="10" fill="#bd6c59" />
+                <circle cx="225" cy="278" r="18" fill="#4f7f73" /><circle cx="312" cy="258" r="13" fill="#e0a54b" />
+                <circle cx="380" cy="289" r="15" fill="#5b88a1" /><circle cx="447" cy="273" r="10" fill="#826c98" />
+              </g>
+              <g class="schools-panel">
+                <rect x="382" y="246" width="199" height="126" rx="16" fill="#fff" stroke="#d6ded6" />
+                <text x="405" y="278" fill="#2a302d" font-family="DM Sans, sans-serif" font-size="11" letter-spacing="1.25">SCHOOL COMPARISON</text>
+                <rect x="405" y="299" width="139" height="9" rx="4.5" fill="#e6ece7" />
+                <rect x="405" y="299" width="92" height="9" rx="4.5" fill="#4f7f73" />
+                <rect x="405" y="322" width="139" height="9" rx="4.5" fill="#e6ece7" />
+                <rect x="405" y="322" width="119" height="9" rx="4.5" fill="#e0a54b" />
+                <rect x="405" y="345" width="139" height="9" rx="4.5" fill="#e6ece7" />
+                <rect x="405" y="345" width="61" height="9" rx="4.5" fill="#bd6c59" />
+              </g>
+            </svg>
+          </div>
+
+          <div class="project-copy">
+            <p class="project-type">Data visualization · Interactive</p>
+            <h2>SFUSD School Diversity</h2>
+            <p class="project-description">
+              A visual tool for comparing student demographics across San Francisco schools.
+            </p>
+            <span class="project-link">View live <span aria-hidden="true">↗</span></span>
+          </div>
+        </a>
+      </section>
+    </main>
+
+    <footer class="site-footer shell">
+      <p>Jess Peng</p>
+      <nav aria-label="Contact links">
+        <a href="https://www.linkedin.com/in/jess-peng" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="https://github.com/jcpengy" target="_blank" rel="noopener noreferrer">GitHub</a>
+      </nav>
+      <p class="updated">Last updated · <span id="last-updated">2026</span></p>
+    </footer>
+  </body>
+</html>
