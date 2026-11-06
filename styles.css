@@ -272,6 +272,14 @@ a { color: inherit; }
 .case-body-copy { max-width: 55ch; }
 .case-body-copy p { margin: 0 0 18px; color: #5e5954; }
 
+.case-tools span {
+  margin-right: 10px;
+  color: var(--muted);
+  font-size: .66rem;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+
 .external-link {
   font-size: .82rem;
   font-weight: 500;
