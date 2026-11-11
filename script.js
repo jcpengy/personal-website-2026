@@ -32,6 +32,13 @@ const projects = [
     href: "projects/rise-up/",
   },
   {
+    id: "molex",
+    title: "Molex",
+    type: "Design, animation, VR, video editing",
+    image: "assets/molex/fit-families.webp",
+    href: "projects/molex/",
+  },
+  {
     id: "syria",
     title: "The New York Times: Inside a Virtual Crime Scene",
     type: "Editorial graphics, animation",

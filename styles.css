@@ -383,6 +383,23 @@ a { color: inherit; }
 }
 .rise-up-gallery .rise-up-wide { grid-column: 1 / -1; }
 
+.molex-gallery .case-media {
+  min-height: 0;
+  align-self: start;
+  aspect-ratio: auto;
+  background: transparent;
+}
+
+.molex-gallery .case-media img,
+.molex-gallery .case-media video {
+  height: auto;
+  object-fit: contain;
+}
+
+.molex-gallery .molex-wide { grid-column: 1 / -1; }
+.molex-gallery .molex-card { grid-column: span 5; }
+.molex-gallery .molex-datasheet { grid-column: span 7; }
+
 .more-work {
   margin-top: clamp(68px, 9vw, 112px);
   padding-top: 22px;
@@ -533,6 +550,9 @@ a { color: inherit; }
   .rise-up-gallery .rise-up-street,
   .rise-up-gallery .rise-up-half,
   .rise-up-gallery .rise-up-wide { grid-column: 1; }
+  .molex-gallery .molex-wide,
+  .molex-gallery .molex-card,
+  .molex-gallery .molex-datasheet { grid-column: 1; }
   .case-gallery-ticket,
   .case-gallery-stars { aspect-ratio: 4 / 3; }
   .case-gallery-wide { aspect-ratio: 16 / 9; }
