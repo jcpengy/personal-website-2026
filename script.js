@@ -37,7 +37,7 @@ const projects = [
 function projectMarkup(project, base) {
   const media = project.video
     ? `<video class="project-image project-video" autoplay muted loop playsinline preload="metadata" poster="${base}${project.poster}"><source src="${base}${project.video}" type="video/mp4" /></video>`
-    : `<img class="project-image" src="${base}${project.image}" alt="${project.href ? "" : project.alt}" loading="lazy" />`;
+    : `<img class="project-image" src="${base}${project.image}" alt="${project.href ? "" : project.alt}" />`;
   const content = `
     <div class="project-visual"${project.href ? ' aria-hidden="true"' : ""}>${media}</div>
     <div class="project-copy">
