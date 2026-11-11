@@ -137,6 +137,8 @@ a { color: inherit; }
   line-height: 1.4;
 }
 
+.project-card-simple .project-link { margin-top: 14px; }
+
 .project-link {
   display: inline-flex;
   gap: 5px;
@@ -168,6 +170,16 @@ a { color: inherit; }
   transform: scale(1.018);
 }
 
+.kessler-card .project-image {
+  filter: saturate(.9);
+  transition: filter 300ms ease, transform 500ms cubic-bezier(.2, .8, .2, 1);
+}
+
+.kessler-card:hover .project-image {
+  filter: saturate(1);
+  transform: scale(1.018);
+}
+
 .back-link {
   display: inline-block;
   margin: 34px 0 52px;
@@ -185,6 +197,11 @@ a { color: inherit; }
   align-items: end;
   max-width: 1120px;
   margin-bottom: 42px;
+}
+
+.case-intro-simple {
+  grid-template-columns: 1fr;
+  max-width: 920px;
 }
 
 .case-intro .eyebrow { margin-bottom: 14px; }
