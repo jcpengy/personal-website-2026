@@ -359,10 +359,41 @@ a { color: inherit; }
 
 .river-gallery .river-gallery-wide { grid-column: 1 / -1; }
 
+.more-work {
+  margin-top: clamp(68px, 9vw, 112px);
+  padding-top: 22px;
+  border-top: 1px solid var(--line);
+}
+
+.more-work-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 20px;
+}
+
+.more-work-all {
+  color: var(--muted);
+  font-size: .72rem;
+  text-underline-offset: 4px;
+}
+
+.project-grid-compact {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.project-grid-compact .project-copy { padding-top: 10px; }
+.project-grid-compact .project-type { margin-bottom: 5px; font-size: .62rem; }
+
+.project-grid-compact .project-copy h2 {
+  font-size: clamp(1rem, 1.25vw, 1.2rem);
+  line-height: 1.15;
+}
+
 .about-main {
   min-height: calc(100svh - 180px);
-  display: flex;
-  align-items: center;
   padding-block: clamp(56px, 8vw, 112px);
 }
 
@@ -455,6 +486,7 @@ a { color: inherit; }
   .site-header { min-height: 66px; }
   .page-intro { padding-top: 34px; }
   .project-grid { grid-template-columns: 1fr; gap: 34px; }
+  .project-grid-compact { gap: 30px; }
   .project-copy { padding-top: 16px; }
   .site-footer {
     grid-template-columns: 1fr;
