@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Selected editorial work by Jess Peng." />
+    <meta name="description" content="Selected design and editorial work by Jess Peng." />
     <meta name="theme-color" content="#fbfaf7" />
     <title>Jess Peng — Selected Work</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -13,7 +13,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
-    <script src="script.js" defer></script>
+    <script src="script.js?v=2" defer></script>
   </head>
   <body>
     <header class="site-header shell">
@@ -28,9 +28,9 @@
 
       <section class="project-grid" aria-label="Selected projects">
         <a
-          class="project-card kessler-card"
+          class="project-card project-card-link kessler-card"
           href="projects/kessler/"
-          aria-label="View the Kessler Project"
+          aria-label="Kessler Project"
         >
           <div class="project-visual" aria-hidden="true">
             <img class="project-image" src="assets/kessler/tickets.webp" alt="" />
@@ -39,14 +39,13 @@
           <div class="project-copy">
             <p class="project-type">Disney Imagineering Finalist</p>
             <h2>Kessler Project</h2>
-            <span class="project-link">View project <span aria-hidden="true">↗</span></span>
           </div>
         </a>
 
         <a
-          class="project-card nyt-card"
+          class="project-card project-card-link nyt-card"
           href="projects/syria/"
-          aria-label="View the Syria virtual crime scene project"
+          aria-label="Inside a Virtual Crime Scene"
         >
           <div class="project-visual" aria-hidden="true">
             <img class="project-image" src="assets/nyt-syria/scene.jpg" alt="" />
@@ -55,9 +54,39 @@
           <div class="project-copy">
             <p class="project-type">Editorial graphics · NYT</p>
             <h2>Inside a Virtual Crime Scene</h2>
-            <span class="project-link">View project <span aria-hidden="true">↗</span></span>
           </div>
         </a>
+
+        <article class="project-card rivers-edge-card">
+          <div class="project-visual">
+            <img
+              class="project-image"
+              src="assets/rivers-edge/cover.webp"
+              alt="A collection of colorful River's Edge Cabin sticker designs"
+            />
+          </div>
+
+          <div class="project-copy">
+            <p class="project-type">Graphic design · 2023</p>
+            <h2>River’s Edge Cabin</h2>
+            <p class="project-description">A logo design, mini pamphlet, and set of stickers for River’s Edge Cabin, a charming Airbnb retreat located in Ellijay, Georgia.</p>
+          </div>
+        </article>
+
+        <article class="project-card tmac-card">
+          <div class="project-visual">
+            <img
+              class="project-image"
+              src="assets/tmac/cover.webp"
+              alt="Lime green cover design for TMAC Journal"
+            />
+          </div>
+
+          <div class="project-copy">
+            <p class="project-type">Graphic design · In progress</p>
+            <h2>TMAC Journal</h2>
+          </div>
+        </article>
       </section>
     </main>
 

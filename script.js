@@ -6,7 +6,6 @@ const modified = new Date(document.lastModified);
 const displayDate = Number.isNaN(modified.getTime()) ? new Date() : modified;
 
 updatedNode.textContent = new Intl.DateTimeFormat("en", {
-  month: "long",
   year: "numeric",
 }).format(displayDate);
 
