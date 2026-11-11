@@ -124,14 +124,6 @@ a { color: inherit; }
   letter-spacing: -.01em;
 }
 
-.project-description {
-  max-width: 46ch;
-  margin: 10px 0 0;
-  color: var(--muted);
-  font-size: .8rem;
-  line-height: 1.5;
-}
-
 .nyt-card .project-image {
   filter: saturate(.82);
   transition: filter 300ms ease, transform 500ms cubic-bezier(.2, .8, .2, 1);
