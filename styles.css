@@ -314,6 +314,12 @@ a { color: inherit; }
   gap: 18px;
 }
 
+.case-media-stack {
+  display: grid;
+  gap: 18px;
+  margin-top: 18px;
+}
+
 .case-media {
   min-height: 280px;
   margin: 0;
@@ -326,6 +332,7 @@ a { color: inherit; }
 .case-media-wide { grid-column: 1 / -1; aspect-ratio: 16 / 7; }
 .case-media-scene { aspect-ratio: 4 / 3; }
 .case-media-portrait { aspect-ratio: 3 / 4; }
+.case-media-slide { min-height: 0; aspect-ratio: 1492 / 1120; }
 
 .site-footer {
   display: grid;
