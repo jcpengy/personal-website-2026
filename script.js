@@ -75,6 +75,56 @@ relatedProjectGrids.forEach((grid) => {
     .join("");
 });
 
+const interactiveTitle = document.querySelector("[data-interactive-title]");
+
+if (interactiveTitle && !prefersReducedMotion.matches) {
+  const titleWords = [...interactiveTitle.querySelectorAll(".kinetic-word")];
+  let animationFrame;
+  let touchReset;
+
+  const moveTitle = (clientX, clientY) => {
+    const bounds = interactiveTitle.getBoundingClientRect();
+    const x = Math.max(-1, Math.min(1, ((clientX - bounds.left) / bounds.width - .5) * 2));
+    const y = Math.max(-1, Math.min(1, ((clientY - bounds.top) / bounds.height - .5) * 2));
+
+    cancelAnimationFrame(animationFrame);
+    animationFrame = requestAnimationFrame(() => {
+      interactiveTitle.classList.add("is-active");
+      titleWords.forEach((word, index) => {
+        const direction = index % 2 === 0 ? 1 : -1;
+        word.style.setProperty("--move-x", `${x * (12 + index * 4) * direction}px`);
+        word.style.setProperty("--move-y", `${y * (9 + index * 2.5) - x * direction * 3}px`);
+        word.style.setProperty("--turn", `${x * direction * (1.6 + index * .35)}deg`);
+      });
+    });
+  };
+
+  const resetTitle = () => {
+    interactiveTitle.classList.remove("is-active");
+    titleWords.forEach((word) => {
+      word.style.setProperty("--move-x", "0px");
+      word.style.setProperty("--move-y", "0px");
+      word.style.setProperty("--turn", "0deg");
+    });
+  };
+
+  interactiveTitle.addEventListener("pointermove", (event) => {
+    moveTitle(event.clientX, event.clientY);
+  });
+
+  interactiveTitle.addEventListener("pointerleave", resetTitle);
+
+  interactiveTitle.addEventListener("touchmove", (event) => {
+    const touch = event.touches[0];
+    if (touch) moveTitle(touch.clientX, touch.clientY);
+  }, { passive: true });
+
+  interactiveTitle.addEventListener("touchend", () => {
+    window.clearTimeout(touchReset);
+    touchReset = window.setTimeout(resetTitle, 350);
+  }, { passive: true });
+}
+
 const modified = new Date(document.lastModified);
 const displayDate = Number.isNaN(modified.getTime()) ? new Date() : modified;
 
