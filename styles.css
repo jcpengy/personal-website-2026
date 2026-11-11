@@ -90,7 +90,6 @@ a { color: inherit; }
 
 .project-visual {
   overflow: hidden;
-  aspect-ratio: 16 / 10;
 }
 
 .project-visual svg,
@@ -102,7 +101,7 @@ a { color: inherit; }
 }
 
 .project-video,
-.project-image { object-fit: cover; }
+.project-image { height: auto; object-fit: cover; }
 
 .project-copy { padding-top: 14px; }
 
@@ -156,6 +155,8 @@ a { color: inherit; }
 
 .rivers-edge-card .project-image,
 .tmac-card .project-image { transition: transform 500ms cubic-bezier(.2, .8, .2, 1); }
+
+.rivers-edge-card:hover .project-image { transform: scale(1.012); }
 
 .back-link {
   display: inline-block;
@@ -324,6 +325,20 @@ a { color: inherit; }
 .case-gallery-stars { border-color: transparent; background: transparent; }
 .case-gallery-ticket img,
 .case-gallery-stars img { object-fit: contain; padding: clamp(12px, 2vw, 28px); }
+
+.river-gallery .case-media {
+  min-height: 0;
+  aspect-ratio: auto;
+  border-color: transparent;
+  background: transparent;
+}
+
+.river-gallery .case-media img {
+  height: auto;
+  object-fit: contain;
+}
+
+.river-gallery .river-gallery-wide { grid-column: 1 / -1; }
 
 .site-footer {
   display: grid;
