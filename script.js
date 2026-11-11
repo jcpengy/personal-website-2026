@@ -25,6 +25,13 @@ const projects = [
     href: "projects/rivers-edge/",
   },
   {
+    id: "rise-up",
+    title: "Rise Up",
+    type: "Design",
+    image: "assets/rise-up/cover.jpg",
+    href: "projects/rise-up/",
+  },
+  {
     id: "syria",
     title: "The New York Times: Inside a Virtual Crime Scene",
     type: "Editorial graphics, animation",
