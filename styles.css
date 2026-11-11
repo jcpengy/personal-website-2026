@@ -29,6 +29,10 @@ a { color: inherit; }
   margin-inline: auto;
 }
 
+.project-page .shell {
+  width: min(100% - clamp(48px, 8vw, 112px), 1240px);
+}
+
 .site-header {
   min-height: 82px;
   display: flex;
@@ -291,6 +295,8 @@ a { color: inherit; }
   gap: 18px;
 }
 
+.case-hero + .case-media-grid { margin-top: 18px; }
+
 .case-gallery {
   display: grid;
   grid-template-columns: repeat(12, minmax(0, 1fr));
@@ -360,6 +366,7 @@ a { color: inherit; }
 
 @media (max-width: 699px) {
   .shell { width: min(100% - 28px, 1320px); }
+  .project-page .shell { width: min(100% - 28px, 1240px); }
   .site-header { min-height: 66px; }
   .page-intro { padding-top: 34px; }
   .project-grid { grid-template-columns: 1fr; gap: 34px; }
