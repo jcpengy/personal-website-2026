@@ -158,6 +158,7 @@ a { color: inherit; }
 }
 
 .kessler-card .project-image {
+  object-fit: contain;
   filter: saturate(.9);
   transition: filter 300ms ease, transform 500ms cubic-bezier(.2, .8, .2, 1);
 }
@@ -330,6 +331,8 @@ a { color: inherit; }
 .case-gallery-ticket { grid-column: span 4; aspect-ratio: 1 / 1; }
 .case-gallery-stars { grid-column: span 8; aspect-ratio: 2 / 1; }
 .case-gallery-wide { grid-column: 1 / -1; aspect-ratio: 16 / 9; }
+.case-gallery-ticket,
+.case-gallery-stars { border-color: transparent; background: transparent; }
 .case-gallery-ticket img,
 .case-gallery-stars img { object-fit: contain; padding: clamp(12px, 2vw, 28px); }
 
