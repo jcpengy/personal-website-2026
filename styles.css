@@ -38,38 +38,19 @@ a { color: inherit; }
 }
 
 .wordmark {
-  display: inline-flex;
-  align-items: baseline;
-  gap: .26em;
-  font-size: 1.35rem;
-  text-decoration: none;
-}
-
-.wordmark-serif {
-  font-family: var(--serif);
-  font-variation-settings: "opsz" 56, "wght" 390;
-  letter-spacing: -.025em;
-  transition: font-variation-settings 320ms ease, transform 320ms ease;
-}
-
-.wordmark-sans {
-  font-family: var(--sans);
-  font-size: .68em;
+  display: inline-block;
+  font-family: "Space Grotesk", var(--sans);
+  font-size: 1.3rem;
   font-weight: 500;
-  letter-spacing: .09em;
-  text-transform: uppercase;
-  transition: letter-spacing 320ms ease, transform 320ms ease;
+  letter-spacing: -.045em;
+  line-height: 1;
+  text-decoration: none;
+  transition: letter-spacing 280ms ease, transform 280ms ease;
 }
 
-.wordmark:hover .wordmark-serif,
-.wordmark:focus-visible .wordmark-serif {
-  font-variation-settings: "opsz" 110, "wght" 520;
-  transform: translateY(-1px) skewX(-4deg);
-}
-
-.wordmark:hover .wordmark-sans,
-.wordmark:focus-visible .wordmark-sans {
-  letter-spacing: .15em;
+.wordmark:hover,
+.wordmark:focus-visible {
+  letter-spacing: -.015em;
   transform: translateX(2px);
 }
 
@@ -329,7 +310,7 @@ a { color: inherit; }
 
 .case-gallery {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(12, minmax(0, 1fr));
   gap: 14px;
 }
 
@@ -345,7 +326,12 @@ a { color: inherit; }
 .case-media-wide { grid-column: 1 / -1; aspect-ratio: 16 / 7; }
 .case-media-scene { aspect-ratio: 4 / 3; }
 .case-media-portrait { aspect-ratio: 3 / 4; }
-.case-gallery-item { min-height: 0; aspect-ratio: 4 / 3; }
+.case-gallery-item { grid-column: span 6; min-height: 0; aspect-ratio: 4 / 3; }
+.case-gallery-ticket { grid-column: span 4; aspect-ratio: 1 / 1; }
+.case-gallery-stars { grid-column: span 8; aspect-ratio: 2 / 1; }
+.case-gallery-wide { grid-column: 1 / -1; aspect-ratio: 16 / 9; }
+.case-gallery-ticket img,
+.case-gallery-stars img { object-fit: contain; padding: clamp(12px, 2vw, 28px); }
 
 .site-footer {
   display: grid;
@@ -390,6 +376,13 @@ a { color: inherit; }
   .case-intro-compact .case-details { grid-template-columns: 1fr; gap: 16px; }
   .case-media-grid { grid-template-columns: 1fr; }
   .case-gallery { grid-template-columns: 1fr; }
+  .case-gallery-item,
+  .case-gallery-ticket,
+  .case-gallery-stars,
+  .case-gallery-wide { grid-column: 1; }
+  .case-gallery-ticket { aspect-ratio: 1 / 1; }
+  .case-gallery-stars { aspect-ratio: 2 / 1; }
+  .case-gallery-wide { aspect-ratio: 16 / 9; }
   .case-media-wide { grid-column: auto; aspect-ratio: 16 / 9; }
   .case-media-scene { aspect-ratio: 4 / 3; }
   .case-media-portrait { aspect-ratio: 3 / 4; }
