@@ -417,76 +417,12 @@ a { color: inherit; }
   overflow: visible;
 }
 
-.doodle-ghost,
-.doodle-line,
-.doodle-code {
+.doodle-static {
   fill: none;
+  stroke: var(--red);
   stroke-linecap: round;
   stroke-linejoin: round;
-}
-
-.doodle-ghost {
-  stroke: #d8cbc5;
-  stroke-width: 2.5;
-}
-
-.doodle-line,
-.doodle-code {
-  stroke: var(--red);
-  stroke-width: 5;
-}
-
-.doodle-line {
-  stroke-dasharray: 820;
-  stroke-dashoffset: 820;
-  animation: draw-line 5s cubic-bezier(.65, 0, .35, 1) infinite;
-}
-
-.doodle-code {
-  stroke-dasharray: 260;
-  stroke-dashoffset: 260;
-  animation: draw-code 5s cubic-bezier(.65, 0, .35, 1) infinite;
-}
-
-.doodle-dot {
-  fill: var(--red);
-  transform-box: fill-box;
-  transform-origin: center;
-  animation: dot-pulse 5s ease-in-out infinite;
-}
-
-.about-motion:hover .doodle-line,
-.about-motion:hover .doodle-code,
-.about-motion:hover .doodle-dot { animation-duration: 2.8s; }
-
-.motion-caption {
-  position: absolute;
-  right: 30px;
-  bottom: 26px;
-  color: var(--muted);
-  font-size: .68rem;
-  letter-spacing: .11em;
-  text-transform: uppercase;
-}
-
-@keyframes draw-line {
-  0%, 8% { stroke-dashoffset: 820; opacity: 0; }
-  14% { opacity: 1; }
-  48%, 76% { stroke-dashoffset: 0; opacity: 1; }
-  92%, 100% { stroke-dashoffset: -820; opacity: 0; }
-}
-
-@keyframes draw-code {
-  0%, 42% { stroke-dashoffset: 260; opacity: 0; }
-  48% { opacity: 1; }
-  64%, 82% { stroke-dashoffset: 0; opacity: 1; }
-  96%, 100% { stroke-dashoffset: -260; opacity: 0; }
-}
-
-@keyframes dot-pulse {
-  0%, 38%, 100% { opacity: 0; transform: scale(.5); }
-  48%, 80% { opacity: 1; transform: scale(1); }
-  90% { opacity: 0; transform: scale(1.4); }
+  stroke-width: 4;
 }
 
 .site-footer {
