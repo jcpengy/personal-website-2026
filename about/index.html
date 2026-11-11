@@ -32,9 +32,47 @@
         </div>
 
         <div class="about-motion" aria-hidden="true">
-          <svg viewBox="0 0 600 420" role="presentation">
-            <path class="doodle-static" d="M52 262 C90 94 208 82 226 185 C239 261 143 284 123 216 C106 158 191 128 265 190 C307 225 315 291 382 269" />
-            <path class="doodle-static" d="M426 133 L365 210 L426 287 M494 133 L555 210 L494 287" />
+          <svg class="sf-scene" viewBox="0 0 600 420" role="presentation">
+            <circle class="sf-sun" cx="486" cy="86" r="37" />
+
+            <g class="sf-fog sf-fog-back">
+              <path d="M40 98 H256" />
+              <path d="M112 126 H347" />
+            </g>
+
+            <path class="sf-hill sf-hill-back" d="M0 270 C100 182 185 201 260 246 C344 297 412 199 600 156 V420 H0 Z" />
+
+            <g class="sf-bridge">
+              <path class="sf-bridge-cable" d="M323 205 Q397 120 472 205 Q522 154 576 205" />
+              <path class="sf-bridge-deck" d="M286 257 H600" />
+              <path class="sf-bridge-tower" d="M330 268 V173 M315 204 H345 M472 268 V173 M457 204 H487" />
+              <path class="sf-bridge-hangers" d="M350 190 V257 M374 163 V257 M398 146 V257 M422 153 V257 M446 176 V257 M492 187 V257 M518 169 V257 M544 171 V257 M570 193 V257" />
+            </g>
+
+            <path class="sf-street" d="M20 345 L330 222" />
+            <path class="sf-cable" d="M26 279 L337 174" />
+
+            <g class="sf-buildings">
+              <path d="M34 316 V241 H91 V292" />
+              <path d="M102 287 V214 H157 V265" />
+              <path d="M167 260 V198 H218 V239" />
+              <path d="M226 237 V182 H272 V219" />
+              <path class="sf-windows" d="M52 259 H72 M52 276 H72 M119 232 H139 M119 249 H139 M181 215 H200 M240 198 H258" />
+            </g>
+
+            <g class="sf-cable-car">
+              <rect class="sf-car-body" x="68" y="273" width="84" height="53" rx="4" />
+              <path class="sf-car-roof" d="M61 275 H158 L147 262 H75 Z" />
+              <path class="sf-car-windows" d="M80 282 H101 V299 H80 Z M108 282 H137 V299 H108 Z" />
+              <path class="sf-car-details" d="M73 309 H146 M83 326 V336 M137 326 V336 M107 262 V237" />
+            </g>
+
+            <g class="sf-fog sf-fog-front">
+              <path d="M-18 303 H181" />
+              <path d="M36 329 H257" />
+            </g>
+
+            <text class="sf-label" x="430" y="346">SF / CA</text>
           </svg>
         </div>
       </section>

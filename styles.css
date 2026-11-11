@@ -449,12 +449,11 @@ a { color: inherit; }
 .about-copy h1 {
   max-width: 12ch;
   margin: 0 0 32px;
-  font-family: var(--serif);
-  font-size: clamp(2.5rem, 5vw, 4.9rem);
-  font-weight: 400;
-  font-variation-settings: "opsz" 88, "wght" 360;
-  letter-spacing: -.045em;
-  line-height: .98;
+  font-family: "Space Grotesk", var(--sans);
+  font-size: clamp(2.45rem, 4.8vw, 4.7rem);
+  font-weight: 500;
+  letter-spacing: -.065em;
+  line-height: .94;
 }
 
 .about-copy p {
@@ -473,7 +472,7 @@ a { color: inherit; }
   display: grid;
   place-items: center;
   overflow: hidden;
-  background: #f4efeb;
+  background: #e6edf1;
 }
 
 .about-motion::after {
@@ -485,16 +484,99 @@ a { color: inherit; }
 }
 
 .about-motion svg {
-  width: min(92%, 560px);
+  width: min(96%, 580px);
   overflow: visible;
 }
 
-.doodle-static {
+.sf-scene {
+  color: var(--ink);
+}
+
+.sf-sun {
+  fill: #f4bd61;
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: sf-sun-pulse 5s ease-in-out infinite;
+}
+
+.sf-hill { stroke: none; }
+.sf-hill-back { fill: #d7d9ce; }
+
+.sf-bridge {
   fill: none;
   stroke: var(--red);
-  stroke-linecap: round;
   stroke-linejoin: round;
-  stroke-width: 4;
+}
+
+.sf-bridge-cable { stroke-width: 3; }
+.sf-bridge-deck { stroke-width: 8; }
+.sf-bridge-tower { stroke-width: 7; }
+.sf-bridge-hangers { stroke-width: 1.5; opacity: .72; }
+
+.sf-street {
+  fill: none;
+  stroke: #6f7778;
+  stroke-width: 54;
+}
+
+.sf-cable {
+  fill: none;
+  stroke: #5e6262;
+  stroke-width: 2;
+}
+
+.sf-buildings {
+  fill: #f7f4ee;
+  stroke: #5c5b58;
+  stroke-linejoin: round;
+  stroke-width: 3;
+}
+
+.sf-buildings .sf-windows {
+  fill: none;
+  stroke-width: 3;
+}
+
+.sf-car-body { fill: #bd4649; stroke: #713234; stroke-width: 3; }
+.sf-car-roof { fill: #f5d381; stroke: #713234; stroke-linejoin: round; stroke-width: 3; }
+.sf-car-windows { fill: #d9edf2; stroke: #713234; stroke-width: 2; }
+.sf-car-details { fill: none; stroke: #713234; stroke-width: 3; }
+
+.sf-cable-car {
+  animation: sf-cable-car-climb 7s cubic-bezier(.65, 0, .35, 1) infinite;
+}
+
+.sf-fog {
+  fill: none;
+  stroke: rgba(251, 250, 247, .86);
+  stroke-linecap: round;
+  stroke-width: 18;
+}
+
+.sf-fog-back { animation: sf-fog-drift 8s ease-in-out infinite alternate; }
+.sf-fog-front { animation: sf-fog-drift 6s ease-in-out -2s infinite alternate-reverse; }
+
+.sf-label {
+  fill: #525b5d;
+  font-family: "Space Grotesk", var(--sans);
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: .18em;
+}
+
+@keyframes sf-cable-car-climb {
+  0%, 15%, 100% { transform: translate(0, 0); }
+  50%, 65% { transform: translate(132px, -48px); }
+}
+
+@keyframes sf-fog-drift {
+  from { transform: translateX(-18px); }
+  to { transform: translateX(34px); }
+}
+
+@keyframes sf-sun-pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.08); }
 }
 
 .site-footer {
