@@ -4,7 +4,6 @@
   --muted: #746f69;
   --line: #dedbd5;
   --red: #bd4649;
-  --red-soft: #f2d8d3;
   --serif: "Newsreader", Georgia, serif;
   --sans: "DM Sans", Arial, sans-serif;
 }
@@ -117,11 +116,6 @@ a { color: inherit; }
 .project-video,
 .project-image { object-fit: cover; }
 
-.schools-card .project-video {
-  height: 112%;
-  transform: translateY(-8%);
-}
-
 .project-copy { padding: 14px 4px 0; }
 
 .project-type { margin: 0 0 6px; }
@@ -163,14 +157,6 @@ a { color: inherit; }
 
 .project-link span { transition: transform 180ms ease; }
 .project-card:hover .project-link span { transform: translate(2px, -2px); }
-
-.heart { fill: var(--red-soft); opacity: .55; transform-origin: center; transition: transform 500ms ease; }
-.dating-card:hover .heart-one { transform: translate(5px, -8px) rotate(5deg); }
-.dating-card:hover .heart-two { transform: translate(-5px, -9px) rotate(-6deg); }
-.dating-panel { transition: transform 420ms cubic-bezier(.2, .8, .2, 1); }
-.dating-card:hover .dating-panel { transform: translateY(-6px); }
-.people use { transition: opacity 300ms ease; }
-.dating-card:hover .people use:nth-child(3n) { opacity: .45; }
 
 .nyt-card .project-image {
   filter: saturate(.82);
