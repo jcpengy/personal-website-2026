@@ -307,7 +307,9 @@ a { color: inherit; }
 }
 
 .case-media-wide { grid-column: 1 / -1; aspect-ratio: 16 / 7; }
+.case-media-animation { aspect-ratio: 16 / 9; }
 .case-media-scene { aspect-ratio: 4 / 3; }
+.case-media-scene-wide { grid-column: 1 / -1; aspect-ratio: 4 / 3; }
 .case-media-portrait { aspect-ratio: 3 / 4; }
 .case-gallery-item { grid-column: span 6; min-height: 0; aspect-ratio: 4 / 3; }
 .case-gallery-ticket,
@@ -383,7 +385,9 @@ a { color: inherit; }
   .case-gallery-stars { aspect-ratio: 4 / 3; }
   .case-gallery-wide { aspect-ratio: 16 / 9; }
   .case-media-wide { grid-column: auto; aspect-ratio: 16 / 9; }
+  .case-media-animation { aspect-ratio: 16 / 9; }
   .case-media-scene { aspect-ratio: 4 / 3; }
+  .case-media-scene-wide { grid-column: auto; aspect-ratio: 4 / 3; }
   .case-media-portrait { aspect-ratio: 3 / 4; }
 }
 
