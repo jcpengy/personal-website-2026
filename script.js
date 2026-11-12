@@ -28,7 +28,8 @@ const projects = [
     id: "rise-up",
     title: "Rise Up",
     type: "Design",
-    image: "assets/rise-up/cover.jpg",
+    image: "assets/rise-up/thumbnail.webp",
+    alt: "Rise Up portraits installed across an outdoor wall and poster-covered column",
     href: "projects/rise-up/",
   },
   {
