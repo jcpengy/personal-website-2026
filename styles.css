@@ -37,7 +37,7 @@ a { color: inherit; }
   min-height: 82px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
   border-bottom: 1px solid var(--line);
 }
 
@@ -72,6 +72,56 @@ a { color: inherit; }
   display: flex;
   align-items: center;
   gap: 20px;
+  flex: 0 0 auto;
+}
+
+.header-pup-track {
+  position: relative;
+  align-self: stretch;
+  flex: 1 1 auto;
+  min-width: 54px;
+  margin-inline: 18px;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.header-pup {
+  --pup-x: 0px;
+  position: absolute;
+  bottom: 5px;
+  left: 0;
+  width: 64px;
+  height: 48px;
+  transform: translate3d(var(--pup-x), 0, 0);
+  transition: transform 320ms cubic-bezier(.22, .78, .28, 1);
+  will-change: transform;
+}
+
+.header-pup-svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  transform: scaleX(var(--pup-direction, 1));
+  transform-origin: center;
+  transition: transform 160ms ease;
+}
+
+.header-pup.is-walking .header-pup-svg {
+  animation: pup-bob 280ms ease-in-out infinite alternate;
+}
+
+.header-pup.is-walking .pup-leg-front { animation: pup-step 240ms ease-in-out infinite alternate; }
+.header-pup.is-walking .pup-leg-back { animation: pup-step 240ms ease-in-out infinite alternate-reverse; }
+
+@keyframes pup-bob {
+  from { translate: 0 0; }
+  to { translate: 0 -2px; }
+}
+
+@keyframes pup-step {
+  from { transform: rotate(-7deg); }
+  to { transform: rotate(8deg); }
 }
 
 .site-nav a {
@@ -535,6 +585,16 @@ a { color: inherit; }
   .shell { width: min(100% - 28px, 1320px); }
   .project-page .shell { width: min(100% - 28px, 1240px); }
   .site-header { min-height: 66px; }
+  .site-nav { gap: 14px; }
+  .header-pup-track {
+    min-width: 38px;
+    margin-inline: 10px;
+  }
+  .header-pup {
+    bottom: 3px;
+    width: 50px;
+    height: 40px;
+  }
   .page-intro { padding-top: 34px; }
   .project-grid { grid-template-columns: 1fr; gap: 34px; }
   .project-grid-compact { gap: 30px; }
@@ -590,5 +650,16 @@ a { color: inherit; }
     transition-duration: .01ms !important;
     animation-duration: .01ms !important;
     animation-iteration-count: 1 !important;
+  }
+
+  .header-pup,
+  .header-pup-svg {
+    transition: none;
+  }
+
+  .header-pup.is-walking .header-pup-svg,
+  .header-pup.is-walking .pup-leg-front,
+  .header-pup.is-walking .pup-leg-back {
+    animation: none;
   }
 }
