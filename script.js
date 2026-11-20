@@ -34,7 +34,7 @@ const projects = [
   },
   {
     id: "molex",
-    title: "Molex",
+    title: "Molex: Branding and Product Animation",
     type: "Design, animation, VR, video editing",
     image: "assets/molex/fit-families.webp",
     href: "projects/molex/",
