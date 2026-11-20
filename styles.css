@@ -93,7 +93,7 @@ a { color: inherit; }
   width: 64px;
   height: 48px;
   transform: translate3d(var(--pup-x), 0, 0);
-  transition: transform 320ms cubic-bezier(.22, .78, .28, 1);
+  transition: transform 860ms cubic-bezier(.22, .72, .26, 1);
   will-change: transform;
 }
 
@@ -108,11 +108,11 @@ a { color: inherit; }
 }
 
 .header-pup.is-walking .header-pup-svg {
-  animation: pup-bob 280ms ease-in-out infinite alternate;
+  animation: pup-bob 150ms ease-in-out infinite alternate;
 }
 
-.header-pup.is-walking .pup-leg-front { animation: pup-step 240ms ease-in-out infinite alternate; }
-.header-pup.is-walking .pup-leg-back { animation: pup-step 240ms ease-in-out infinite alternate-reverse; }
+.header-pup.is-walking .pup-leg-front { animation: pup-step 105ms ease-in-out infinite alternate; }
+.header-pup.is-walking .pup-leg-back { animation: pup-step 105ms ease-in-out infinite alternate-reverse; }
 
 @keyframes pup-bob {
   from { translate: 0 0; }
@@ -504,6 +504,21 @@ a { color: inherit; }
   font-weight: 400;
   letter-spacing: -.045em;
   line-height: 1;
+}
+
+.location-lockup {
+  display: inline-flex;
+  align-items: flex-end;
+  gap: .12em;
+  white-space: nowrap;
+}
+
+.sf-tower-doodle {
+  width: .5em;
+  height: .78em;
+  flex: 0 0 auto;
+  overflow: visible;
+  transform: translateY(.03em) rotate(1.5deg);
 }
 
 .about-bio {

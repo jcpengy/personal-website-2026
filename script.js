@@ -54,7 +54,7 @@ if (header) {
     if (animate) {
       pup.classList.add("is-walking");
       window.clearTimeout(walkTimer);
-      walkTimer = window.setTimeout(() => pup.classList.remove("is-walking"), 360);
+      walkTimer = window.setTimeout(() => pup.classList.remove("is-walking"), 960);
     }
   };
 
@@ -69,7 +69,7 @@ if (header) {
 const projects = [
   {
     id: "tmac",
-    title: "TMAC Journal",
+    title: "TMAC Journal (Coming Soon!!)",
     type: "Editorial design, art direction",
     image: "assets/tmac/cover.webp",
     alt: "Lime green cover design for TMAC Journal",
