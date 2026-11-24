@@ -471,6 +471,17 @@ a { color: inherit; }
   padding-top: 8px;
 }
 
+.about-portrait {
+  margin: 0 0 clamp(30px, 4vw, 48px);
+  overflow: hidden;
+}
+
+.about-portrait img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
 .about-skills > .eyebrow {
   margin: 0 0 24px;
   padding-top: 14px;
