@@ -441,9 +441,9 @@ a { color: inherit; }
 .about-hero {
   width: 100%;
   display: grid;
-  grid-template-columns: minmax(0, 1.45fr) minmax(350px, .75fr);
+  grid-template-columns: minmax(0, 1.15fr) minmax(420px, .85fr);
   align-items: start;
-  gap: clamp(56px, 8vw, 128px);
+  gap: clamp(48px, 6vw, 96px);
 }
 
 .about-copy h1 {
