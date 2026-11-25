@@ -81,3 +81,34 @@ if (updatedNode) {
 if (prefersReducedMotion.matches) {
   document.querySelectorAll(".project-video").forEach((video) => video.pause());
 }
+
+const artLightbox = document.querySelector("[data-art-lightbox]");
+const artLightboxImage = document.querySelector("[data-art-lightbox-image]");
+const artLightboxClose = document.querySelector("[data-art-lightbox-close]");
+const artItems = document.querySelectorAll("[data-art-src]");
+let lastArtItem = null;
+
+if (artLightbox && artLightboxImage && artLightboxClose) {
+  artItems.forEach((item) => {
+    item.addEventListener("click", () => {
+      lastArtItem = item;
+      artLightboxImage.src = item.dataset.artSrc;
+      artLightboxImage.alt = item.dataset.artAlt || "Expanded artwork";
+      document.body.classList.add("lightbox-open");
+      artLightbox.showModal();
+    });
+  });
+
+  artLightboxClose.addEventListener("click", () => artLightbox.close());
+
+  artLightbox.addEventListener("click", (event) => {
+    if (event.target === artLightbox) artLightbox.close();
+  });
+
+  artLightbox.addEventListener("close", () => {
+    document.body.classList.remove("lightbox-open");
+    artLightboxImage.removeAttribute("src");
+    artLightboxImage.alt = "";
+    lastArtItem?.focus();
+  });
+}
